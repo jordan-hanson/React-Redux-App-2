@@ -5,7 +5,7 @@ import { getGif } from '../actions';
 const Card = ({ gif, isFetching, error, getGif }) => {
     useEffect(() => {
         getGif()
-    })
+    }, []);
 
     if (isFetching) {
         return <h2>Gif is fetching</h2>
